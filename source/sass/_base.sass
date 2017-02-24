@@ -20,6 +20,7 @@ p
   margin: 1rem 0 .5rem
   font-size: 18px
   line-height: 1.3
+  color: #333
 
 @media (min-width: 768px)
   p
@@ -96,18 +97,16 @@ article
       padding: .5rem 0 0
 
   a
-    font-size: 1.3rem
+    font-size: 1.5rem
     color: black
 
 @media (min-width: 900px)
   .nav-trigger
-    position: fixed
+    position: relative
     width: 5vw
-    top: 0
-    left: 94vw
-    margin: 0
+    margin-left: 95vw
     padding: 0
-    height: 2.1rem
+    height: 2.11rem
 
 .chapter-masthead
   text-align: center
@@ -168,16 +167,25 @@ article
   text-transform: uppercase
 
 .intro
+  // background:
+  //   image: url(https://upload.wikimedia.org/wikipedia/commons/8/8b/Moby_Dick_final_chase.jpg)
+  //   size: cover
+  //   position: center
   background:
-    image: url(https://upload.wikimedia.org/wikipedia/commons/8/8b/Moby_Dick_final_chase.jpg)
+    image: url(http://www.picaresquestudio.com/wp-content/uploads/2014/11/TheWhale.jpg)
     size: cover
-    position: center
+    position: center top
   height: 100vh
 
 @media (min-width: 768px)
   .intro
     background:
-      position: center 20%
+      position: center 5%
+
+@media (min-width: 1200px)
+  .intro
+    background:
+      position: center 10%
 
 .poem
   p
