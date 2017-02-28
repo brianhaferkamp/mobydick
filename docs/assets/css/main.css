@@ -146,6 +146,10 @@ article {
   color: black;
 }
 
+.menu-close {
+  display: none;
+}
+
 #toc-toggle {
   display: none;
 }
