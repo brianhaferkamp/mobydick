@@ -48,13 +48,13 @@ $( document ).ready(function() {
   // show masthead on window scroll
   $(window).scroll(function() {
     if ($(window).scrollTop() > 100) {
-      $('.title').fadeOut(200);
-      $('.masthead').fadeIn(200).css({
+      $('.title').fadeOut();
+      $('.masthead').fadeIn().css({
         'display' : 'flex'
       });
     } else {
-      $('.title').fadeIn(200);
-      $('.masthead').fadeOut(200);
+      $('.title').fadeIn();
+      $('.masthead').fadeOut();
     }
   });
 
