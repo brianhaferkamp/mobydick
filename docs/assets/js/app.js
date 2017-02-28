@@ -45,7 +45,7 @@ $( document ).ready(function() {
     $('main, #main-menu').removeClass('menu-reveal');
   });
 
-  // show masthead on window scroll
+  // show/hide masthead on window scroll
   $(window).scroll(function() {
     if ($(window).scrollTop() > 100) {
       $('.title').fadeOut();

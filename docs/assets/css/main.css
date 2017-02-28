@@ -55,6 +55,11 @@ article {
   margin: auto;
 }
 
+main {
+  -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
