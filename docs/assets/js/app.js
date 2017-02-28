@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   // hide these elements on page load
-  $('#main-menu, .menu-close').hide();
+  $('#main-menu, .menu-close, .masthead').hide();
 
 
   // open menu on menu open click
@@ -29,6 +29,7 @@ $( document ).ready(function() {
     $('.menu-close').hide();
   });
 
+  // toggle table of contents open on screens 900px and up
   $('#toc-toggle .menu-open').on('click', function(e) {
     e.preventDefault();
     $(this).hide();
@@ -36,11 +37,25 @@ $( document ).ready(function() {
     $('main, #main-menu').addClass('menu-reveal');
   });
 
+  // toggle table of contents closed on screens 900px and up
   $('#toc-toggle .menu-close').on('click', function(e) {
     e.preventDefault();
     $(this).hide();
     $('#toc-toggle .menu-open').show();
     $('main, #main-menu').removeClass('menu-reveal');
+  });
+
+  // show masthead on window scroll
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 100) {
+      $('.title').fadeOut(200);
+      $('.masthead').fadeIn(200).css({
+        'display' : 'flex'
+      });
+    } else {
+      $('.title').fadeIn(200);
+      $('.masthead').fadeOut(200);
+    }
   });
 
 });

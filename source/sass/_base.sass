@@ -51,6 +51,7 @@ article
   top: 0
   left: 0
   width: 100%
+  display: none
 
   a
     color: white
@@ -58,7 +59,7 @@ article
 
 @media (min-width: 900px)
   .masthead
-    display: flex
+    display: none
     justify-content: space-between
     align-items: center
 
@@ -213,6 +214,30 @@ article
     size: cover
     position: center top
   height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .title
+    // margin-bottom: 100px
+    text-align: center
+    color: white
+
+    h1
+      font-size: 3.5rem
+
+    h2
+      font-weight: 400
+      font-size: 1rem
+
+  @media (min-width: 768px)
+    .title
+      h1
+        font-size: 5.5rem
+
+      h2
+        font-weight: 400
+        font-size: 1.5rem
 
 @media (min-width: 768px)
   .intro

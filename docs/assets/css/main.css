@@ -75,6 +75,7 @@ article {
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
 }
 
 .masthead a {
@@ -211,6 +212,29 @@ article {
   background-size: cover;
   background-position: center top;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro .title {
+  text-align: center;
+  color: white;
+}
+
+.intro .title h1 {
+  font-size: 3.5rem;
+}
+
+.intro .title h2 {
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .poem p {
@@ -232,6 +256,13 @@ article {
   .menu-heading {
     font-size: 1.3rem;
   }
+  .intro .title h1 {
+    font-size: 5.5rem;
+  }
+  .intro .title h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+  }
   .intro {
     background-position: center 5%;
   }
@@ -239,9 +270,7 @@ article {
 
 @media (min-width: 900px) {
   .masthead {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
