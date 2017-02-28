@@ -235,6 +235,7 @@ main {
 
 .intro .title h1 {
   font-size: 3.5rem;
+  font-weight: 400;
 }
 
 .intro .title h2 {
@@ -261,6 +262,10 @@ main {
   .menu-heading {
     font-size: 1.3rem;
   }
+  .intro .title {
+    text-align: left;
+    margin-left: 1rem;
+  }
   .intro .title h1 {
     font-size: 5.5rem;
   }
@@ -270,6 +275,9 @@ main {
   }
   .intro {
     background-position: center 5%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
