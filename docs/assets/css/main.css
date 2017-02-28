@@ -28,6 +28,8 @@ body {
   position: relative;
   z-index: 1;
   font-family: 'IM Fell DW Pica', serif;
+  -webkit-transition: -webkit-transform 300ms ease;
+          transition: transform 300ms ease;
 }
 
 h1,
@@ -78,6 +80,13 @@ article {
 .masthead a {
   color: white;
   text-decoration: none;
+}
+
+.masthead-stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 #branding {
@@ -137,6 +146,10 @@ article {
   color: black;
 }
 
+#toc-toggle {
+  display: none;
+}
+
 .chapter-masthead {
   text-align: center;
   padding-top: 2rem;
@@ -166,7 +179,6 @@ article {
   overflow-y: auto;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
   z-index: 10;
-  display: none;
 }
 
 #main-menu ul {
@@ -200,10 +212,20 @@ article {
   font-size: 1.1rem;
 }
 
+.menu-reveal {
+  margin-left: -20vw;
+}
+
 @media (min-width: 768px) {
   p {
     font-size: 20px;
     line-height: 1.4;
+  }
+  #main-menu {
+    font-size: 1.3rem;
+  }
+  .menu-heading {
+    font-size: 1.3rem;
   }
   .intro {
     background-position: center 5%;
@@ -211,32 +233,50 @@ article {
 }
 
 @media (min-width: 900px) {
+  .masthead {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   #branding {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
   .nav-trigger {
-    position: relative;
-    width: 5vw;
-    margin-left: 95vw;
-    padding: 0;
-    height: 2.11rem;
+    display: none;
+  }
+  #toc-toggle {
+    display: block;
+  }
+  .chapter-masthead {
+    padding-top: 4rem;
   }
   #main-menu {
-    top: 0;
-    left: 75vw;
-    height: 100vh;
-    width: 25vw;
-    padding: 4rem 0 0 0;
-    font-size: 1.3rem;
-  }
-}
-
-@media (min-width: 1368px) {
-  #main-menu {
-    left: 80vw;
+    position: fixed;
+    top: 68px;
+    left: 100vw;
     width: 20vw;
+    height: 100vh;
+    overflow-y: auto;
+    background: #eee;
+    padding: 2rem 1rem 4rem;
+  }
+  #main-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  #main-menu ul li {
+    padding: 1rem 0;
+  }
+  #main-menu ul a:hover {
+    text-decoration: underline;
   }
 }
 

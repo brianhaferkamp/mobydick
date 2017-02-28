@@ -7,7 +7,7 @@ $( document ).ready(function() {
   // open menu on menu open click
   $('.menu-open').on('click', function(e) {
     e.preventDefault();
-    $('#main-menu').slideDown();
+    $('#main-menu').show();
     $('.menu-open').hide();
     $('.menu-close').show();
   });
@@ -16,16 +16,31 @@ $( document ).ready(function() {
   // close menu on menu close or link click
   $('.menu-close').on('click', function(e) {
     e.preventDefault();
-    $('#main-menu').slideUp();
+    $('#main-menu').hide();
     $('.menu-open').show();
     $('.menu-close').hide();
   });
 
   // close menu on menu close or link click
   $('#main-menu a').on('click', function() {
-    $('#main-menu').slideUp();
+    $('#main-menu').hide();
+    $('main, #main-menu').removeClass('menu-reveal');
     $('.menu-open').show();
     $('.menu-close').hide();
+  });
+
+  $('#toc-toggle .menu-open').on('click', function(e) {
+    e.preventDefault();
+    $(this).hide();
+    $('#toc-toggle .menu-close').show();
+    $('main, #main-menu').addClass('menu-reveal');
+  });
+
+  $('#toc-toggle .menu-close').on('click', function(e) {
+    e.preventDefault();
+    $(this).hide();
+    $('#toc-toggle .menu-open').show();
+    $('main, #main-menu').removeClass('menu-reveal');
   });
 
 });

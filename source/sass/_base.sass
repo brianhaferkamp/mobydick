@@ -6,6 +6,7 @@ body
   position: relative
   z-index: 1
   font-family: 'IM Fell DW Pica', serif
+  transition: transform 300ms ease
 
 h1,
 h2,
@@ -55,6 +56,18 @@ article
     color: white
     text-decoration: none
 
+@media (min-width: 900px)
+  .masthead
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.masthead-stick
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+
 #branding
   display: flex
   justify-content: space-between
@@ -102,15 +115,22 @@ article
 
 @media (min-width: 900px)
   .nav-trigger
-    position: relative
-    width: 5vw
-    margin-left: 95vw
-    padding: 0
-    height: 2.11rem
+    display: none
+
+#toc-toggle
+  display: none
+
+@media (min-width: 900px)
+  #toc-toggle
+    display: block
 
 .chapter-masthead
   text-align: center
   padding-top: 2rem
+
+@media (min-width: 900px)
+  .chapter-masthead
+    padding-top: 4rem
 
 .chapter-heading
   font-size: 2rem
@@ -120,7 +140,6 @@ article
   padding-bottom: 1rem
   text-transform: uppercase
   font-size: .9rem
-
 
 #main-menu
   background: #eee
@@ -135,7 +154,7 @@ article
   overflow-y: auto
   box-shadow: 0px 0px 10px 0px rgba(black, 0.15)
   z-index: 10
-  display: none
+  // display: none
 
   ul
     list-style: none
@@ -149,29 +168,42 @@ article
         text-decoration: none
         color: #222
 
-@media (min-width: 900px)
+@media (min-width: 768px)
   #main-menu
-    top: 0
-    left: 75vw
-    height: 100vh
-    width: 25vw
-    padding: 4rem 0 0 0
     font-size: 1.3rem
 
-@media (min-width: 1368px)
+@media (min-width: 900px)
   #main-menu
-    left: 80vw
+    position: fixed
+    top: 68px
+    left: 100vw
     width: 20vw
+    height: 100vh
+    overflow-y: auto
+    background: #eee
+    padding: 2rem 1rem 4rem
+
+    ul
+      list-style: none
+      padding: 0
+
+      li
+        padding: 1rem 0
+
+      a
+
+        &:hover
+          text-decoration: underline
 
 .menu-heading
   font-size: 1rem
   text-transform: uppercase
 
+@media (min-width: 768px)
+  .menu-heading
+    font-size: 1.3rem
+
 .intro
-  // background:
-  //   image: url(https://upload.wikimedia.org/wikipedia/commons/8/8b/Moby_Dick_final_chase.jpg)
-  //   size: cover
-  //   position: center
   background:
     image: url(http://www.picaresquestudio.com/wp-content/uploads/2014/11/TheWhale.jpg)
     size: cover
@@ -191,3 +223,6 @@ article
 .poem
   p
     font-size: 1.1rem
+
+.menu-reveal
+  margin-left: -20vw
