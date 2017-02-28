@@ -55,6 +55,9 @@ $( document ).ready(function() {
     } else {
       $('.title').fadeIn();
       $('.masthead').fadeOut();
+      $('main, #main-menu').removeClass('menu-reveal');
+      $('.menu-open').show();
+      $('.menu-close').hide();
     }
   });
 
