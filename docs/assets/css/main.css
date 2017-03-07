@@ -129,7 +129,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ddd;
+  background-color: red;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -149,7 +149,7 @@ main {
 
 .nav-trigger a {
   font-size: 2rem;
-  color: black;
+  color: white;
 }
 
 .menu-close {
@@ -177,7 +177,7 @@ main {
 }
 
 #main-menu {
-  background: #eee;
+  background: white;
   text-align: center;
   padding: 2rem 0 0;
   margin-bottom: 2rem;
@@ -187,7 +187,7 @@ main {
   left: 0;
   width: 100%;
   overflow-y: auto;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
   z-index: 10;
   display: none;
 }
@@ -204,12 +204,13 @@ main {
 
 #main-menu ul li a {
   text-decoration: none;
-  color: #222;
+  color: red;
 }
 
 .menu-heading {
   font-size: 1rem;
   text-transform: uppercase;
+  color: red;
 }
 
 .intro {
@@ -312,7 +313,7 @@ main {
     width: 20vw;
     height: 100vh;
     overflow-y: auto;
-    background: #eee;
+    background: white;
     padding: 2rem 1rem 4rem;
   }
   #main-menu ul {
